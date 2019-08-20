@@ -40,7 +40,12 @@ router.get('/movie/:id',(req, res, next)=>{
       parsedData
     })
   })
+})
 
+router.get('/register',(req, res, next)=>{
+  res.render('register',{
+
+  });
 })
 
 module.exports = router;
