@@ -1,0 +1,20 @@
+<% include head %>
+
+	<body>
+		<div class="container">
+      		<div class="row">
+				<div class="col col-12">
+					  <h1>Movies Now Playing</h1>
+				</div> 
+					<!-- we have an array! it's parsedData -->
+				<% parsedData.forEach((movie,i)=>{ %>
+					<div class="col col-lg-3 col-md-4 col-sm-6 col-12 poster">
+						<a href="/movie/<%= movie.id %>">
+							<img src="<%= imageBaseUrl + movie.poster_path %>" />
+						</a>
+					</div>
+				<% }) %>
+    		</div>
+    	</div>
+	  </body>
+</html>
